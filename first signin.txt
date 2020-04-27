@@ -1,0 +1,54 @@
+import React from 'react';
+import { StyleSheet, Text, View, TouchableOpacity, ImageBackground, TextInput} from 'react-native';
+export default function App() {
+  return (
+
+    <ImageBackground source={{ uri: "https://images.unsplash.com/photo-1514621166532-aa7eb1a3a2f4?ixlib=rb-1.2.1&w=1000&q=80" }} style={styles.bkimage}>
+
+      <View style={styles.container}>
+
+        <View style={{
+          height: 680,
+          width: 330,
+          backgroundColor: "white",
+          alignItems: 'center', justifyContent: "center"
+        }}>
+
+          <Text style={{ fontSize: 30, textAlign: "center", fontWeight: "bold" }}>Sign In </Text>
+          <TextInput placeholder="Your Name" style={{ height: 40, borderColor: 'black', borderWidth: 2, width: 250, jusifyContent: "center", alignItems: "center", padding: 6, margin: 15 }} />
+          <TextInput placeholder="Your Email"
+            style={{ height: 40, borderColor: 'black', borderWidth: 2, width: 250, jusifyContent: "center", alignItems: "center", padding: 6, margin: 15 }} />
+          <TextInput placeholder="Password"
+            style={{ height: 40, borderColor: 'black', borderWidth: 2, width: 250, jusifyContent: "center", alignItems: "center", padding: 6, margin: 15 }} />
+
+          <TouchableOpacity
+            onPress={() => alert('welcome to my Application')}
+
+            style={{
+              backgroundColor: '#9DC5C3', height: 40, width: 100, padding: 10, margin: 20,
+              justifyContent: "center", alignItems: "center"
+            }}>
+
+            <Text style={{ fontSize: 15, color: 'black', padding: 6 }}>
+              Log In</Text>
+          </TouchableOpacity>
+        
+        </View>
+
+      </View>
+    </ImageBackground>
+  );
+}
+const styles = StyleSheet.create({
+  container: {
+    alignItems: "center",
+    justifyContent: 'center',
+  },
+  bkimage: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center",
+    alignItems: "center"
+  }
+
+});
